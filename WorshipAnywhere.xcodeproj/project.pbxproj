@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */; };
+		2DA1D02E1C31E4CD00FF7CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D02D1C31E4CD00FF7CB7 /* ViewController.swift */; };
+		2DA1D0311C31E4CD00FF7CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */; };
+		2DA1D0331C31E4CD00FF7CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */; };
+		2DA1D03E1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D03D1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift */; };
+		2DA1D0491C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DA1D03A1C31E4CE00FF7CB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DA1D0201C31E4CD00FF7CB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DA1D0271C31E4CD00FF7CB7;
+			remoteInfo = WorshipAnywhere;
+		};
+		2DA1D0451C31E4CE00FF7CB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DA1D0201C31E4CD00FF7CB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DA1D0271C31E4CD00FF7CB7;
+			remoteInfo = WorshipAnywhere;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DA1D0281C31E4CD00FF7CB7 /* WorshipAnywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorshipAnywhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DA1D02D1C31E4CD00FF7CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DA1D0301C31E4CD00FF7CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DA1D0341C31E4CD00FF7CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DA1D0391C31E4CE00FF7CB7 /* WorshipAnywhereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorshipAnywhereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA1D03D1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorshipAnywhereTests.swift; sourceTree = "<group>"; };
+		2DA1D03F1C31E4CE00FF7CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DA1D0441C31E4CE00FF7CB7 /* WorshipAnywhereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorshipAnywhereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorshipAnywhereUITests.swift; sourceTree = "<group>"; };
+		2DA1D04A1C31E4CE00FF7CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DA1D0251C31E4CD00FF7CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DA1D0361C31E4CE00FF7CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DA1D0411C31E4CE00FF7CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DA1D01F1C31E4CD00FF7CB7 = {
+			isa = PBXGroup;
+			children = (
+				2DA1D02A1C31E4CD00FF7CB7 /* WorshipAnywhere */,
+				2DA1D03C1C31E4CE00FF7CB7 /* WorshipAnywhereTests */,
+				2DA1D0471C31E4CE00FF7CB7 /* WorshipAnywhereUITests */,
+				2DA1D0291C31E4CD00FF7CB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DA1D0291C31E4CD00FF7CB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1D0281C31E4CD00FF7CB7 /* WorshipAnywhere.app */,
+				2DA1D0391C31E4CE00FF7CB7 /* WorshipAnywhereTests.xctest */,
+				2DA1D0441C31E4CE00FF7CB7 /* WorshipAnywhereUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DA1D02A1C31E4CD00FF7CB7 /* WorshipAnywhere */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */,
+				2DA1D02D1C31E4CD00FF7CB7 /* ViewController.swift */,
+				2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */,
+				2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */,
+				2DA1D0341C31E4CD00FF7CB7 /* Info.plist */,
+			);
+			path = WorshipAnywhere;
+			sourceTree = "<group>";
+		};
+		2DA1D03C1C31E4CE00FF7CB7 /* WorshipAnywhereTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1D03D1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift */,
+				2DA1D03F1C31E4CE00FF7CB7 /* Info.plist */,
+			);
+			path = WorshipAnywhereTests;
+			sourceTree = "<group>";
+		};
+		2DA1D0471C31E4CE00FF7CB7 /* WorshipAnywhereUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */,
+				2DA1D04A1C31E4CE00FF7CB7 /* Info.plist */,
+			);
+			path = WorshipAnywhereUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DA1D0271C31E4CD00FF7CB7 /* WorshipAnywhere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DA1D04D1C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhere" */;
+			buildPhases = (
+				2DA1D0241C31E4CD00FF7CB7 /* Sources */,
+				2DA1D0251C31E4CD00FF7CB7 /* Frameworks */,
+				2DA1D0261C31E4CD00FF7CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorshipAnywhere;
+			productName = WorshipAnywhere;
+			productReference = 2DA1D0281C31E4CD00FF7CB7 /* WorshipAnywhere.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DA1D0381C31E4CE00FF7CB7 /* WorshipAnywhereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DA1D0501C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhereTests" */;
+			buildPhases = (
+				2DA1D0351C31E4CE00FF7CB7 /* Sources */,
+				2DA1D0361C31E4CE00FF7CB7 /* Frameworks */,
+				2DA1D0371C31E4CE00FF7CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DA1D03B1C31E4CE00FF7CB7 /* PBXTargetDependency */,
+			);
+			name = WorshipAnywhereTests;
+			productName = WorshipAnywhereTests;
+			productReference = 2DA1D0391C31E4CE00FF7CB7 /* WorshipAnywhereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DA1D0431C31E4CE00FF7CB7 /* WorshipAnywhereUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DA1D0531C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhereUITests" */;
+			buildPhases = (
+				2DA1D0401C31E4CE00FF7CB7 /* Sources */,
+				2DA1D0411C31E4CE00FF7CB7 /* Frameworks */,
+				2DA1D0421C31E4CE00FF7CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DA1D0461C31E4CE00FF7CB7 /* PBXTargetDependency */,
+			);
+			name = WorshipAnywhereUITests;
+			productName = WorshipAnywhereUITests;
+			productReference = 2DA1D0441C31E4CE00FF7CB7 /* WorshipAnywhereUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DA1D0201C31E4CD00FF7CB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "XNI Technologies, LLC";
+				TargetAttributes = {
+					2DA1D0271C31E4CD00FF7CB7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2DA1D0381C31E4CE00FF7CB7 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2DA1D0271C31E4CD00FF7CB7;
+					};
+					2DA1D0431C31E4CE00FF7CB7 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2DA1D0271C31E4CD00FF7CB7;
+					};
+				};
+			};
+			buildConfigurationList = 2DA1D0231C31E4CD00FF7CB7 /* Build configuration list for PBXProject "WorshipAnywhere" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DA1D01F1C31E4CD00FF7CB7;
+			productRefGroup = 2DA1D0291C31E4CD00FF7CB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DA1D0271C31E4CD00FF7CB7 /* WorshipAnywhere */,
+				2DA1D0381C31E4CE00FF7CB7 /* WorshipAnywhereTests */,
+				2DA1D0431C31E4CE00FF7CB7 /* WorshipAnywhereUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DA1D0261C31E4CD00FF7CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA1D0331C31E4CD00FF7CB7 /* Assets.xcassets in Resources */,
+				2DA1D0311C31E4CD00FF7CB7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DA1D0371C31E4CE00FF7CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DA1D0421C31E4CE00FF7CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DA1D0241C31E4CD00FF7CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA1D02E1C31E4CD00FF7CB7 /* ViewController.swift in Sources */,
+				2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DA1D0351C31E4CE00FF7CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA1D03E1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DA1D0401C31E4CE00FF7CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA1D0491C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DA1D03B1C31E4CE00FF7CB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DA1D0271C31E4CD00FF7CB7 /* WorshipAnywhere */;
+			targetProxy = 2DA1D03A1C31E4CE00FF7CB7 /* PBXContainerItemProxy */;
+		};
+		2DA1D0461C31E4CE00FF7CB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DA1D0271C31E4CD00FF7CB7 /* WorshipAnywhere */;
+			targetProxy = 2DA1D0451C31E4CE00FF7CB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DA1D0301C31E4CD00FF7CB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DA1D04B1C31E4CE00FF7CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		2DA1D04C1C31E4CE00FF7CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DA1D04E1C31E4CE00FF7CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = WorshipAnywhere/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2DA1D04F1C31E4CE00FF7CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = WorshipAnywhere/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2DA1D0511C31E4CE00FF7CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WorshipAnywhereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorshipAnywhere.app/WorshipAnywhere";
+			};
+			name = Debug;
+		};
+		2DA1D0521C31E4CE00FF7CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WorshipAnywhereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorshipAnywhere.app/WorshipAnywhere";
+			};
+			name = Release;
+		};
+		2DA1D0541C31E4CE00FF7CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WorshipAnywhereUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhereUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WorshipAnywhere;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2DA1D0551C31E4CE00FF7CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WorshipAnywhereUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhereUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WorshipAnywhere;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DA1D0231C31E4CD00FF7CB7 /* Build configuration list for PBXProject "WorshipAnywhere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DA1D04B1C31E4CE00FF7CB7 /* Debug */,
+				2DA1D04C1C31E4CE00FF7CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DA1D04D1C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DA1D04E1C31E4CE00FF7CB7 /* Debug */,
+				2DA1D04F1C31E4CE00FF7CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2DA1D0501C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DA1D0511C31E4CE00FF7CB7 /* Debug */,
+				2DA1D0521C31E4CE00FF7CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2DA1D0531C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhereUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DA1D0541C31E4CE00FF7CB7 /* Debug */,
+				2DA1D0551C31E4CE00FF7CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DA1D0201C31E4CD00FF7CB7 /* Project object */;
+}
