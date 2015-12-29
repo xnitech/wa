@@ -11,14 +11,12 @@ import AVKit
 
 class ViewController: UIViewController {
 
+   var player = AVPlayer()
+   
    override func viewDidLoad() {
       super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
-      
-      //let player = AVPlayer(URL: NSURL(string: "http://www.stpaulserbin.org/media/videos/SerbinChurch_12_20_2015/VTS_01_1.mp4")!)
-      //player.play()
    }
-
+   
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
@@ -27,8 +25,9 @@ class ViewController: UIViewController {
    @IBAction func playVideo(sender: AnyObject)
    {
       let playerVC = PlayerViewController()
-      playerVC.playVideo()
-      [self.presentViewController(playerVC, animated: true, completion: nil)]
+      self.presentViewController(playerVC, animated: true) {
+         playerVC.playVideo()
+      }
    }
 
 }
