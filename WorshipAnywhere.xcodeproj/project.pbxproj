@@ -13,6 +13,7 @@
 		2DA1D0331C31E4CD00FF7CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */; };
 		2DA1D03E1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D03D1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift */; };
 		2DA1D0491C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */; };
+		2DA1D0591C31EA2100FF7CB7 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		2DA1D0441C31E4CE00FF7CB7 /* WorshipAnywhereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorshipAnywhereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorshipAnywhereUITests.swift; sourceTree = "<group>"; };
 		2DA1D04A1C31E4CE00FF7CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */,
 				2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */,
 				2DA1D0341C31E4CD00FF7CB7 /* Info.plist */,
+				2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */,
 			);
 			path = WorshipAnywhere;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				TargetAttributes = {
 					2DA1D0271C31E4CD00FF7CB7 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 78D83RV42P;
 					};
 					2DA1D0381C31E4CE00FF7CB7 = {
 						CreatedOnToolsVersion = 7.2;
@@ -254,6 +258,7 @@
 			files = (
 				2DA1D02E1C31E4CD00FF7CB7 /* ViewController.swift in Sources */,
 				2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */,
+				2DA1D0591C31EA2100FF7CB7 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,10 +391,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WorshipAnywhere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -398,10 +406,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WorshipAnywhere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xnitech.WorshipAnywhere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
