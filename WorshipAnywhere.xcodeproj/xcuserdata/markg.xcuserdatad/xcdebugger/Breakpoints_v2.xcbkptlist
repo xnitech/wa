@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
             endingLineNumber = "72"
-            landmarkName = "observeValueForKeyPath(_:ofObject:change:context:)"
+            landmarkName = "playVideo()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "observeValueForKeyPath(_:ofObject:change:context:)"
+            landmarkName = "playVideo()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

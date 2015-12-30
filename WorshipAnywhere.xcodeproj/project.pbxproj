@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0A23691C34409B00291B04 /* WorshipServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A23681C34409B00291B04 /* WorshipServicesViewController.swift */; };
+		2D0A236D1C3445B100291B04 /* SpecialServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A236C1C3445B100291B04 /* SpecialServicesViewController.swift */; };
+		2D0A236F1C34573E00291B04 /* VTS_01_1_Thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D0A236E1C34573E00291B04 /* VTS_01_1_Thumb.jpg */; };
 		2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */; };
 		2DA1D02E1C31E4CD00FF7CB7 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */; };
 		2DA1D0311C31E4CD00FF7CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D0A23681C34409B00291B04 /* WorshipServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorshipServicesViewController.swift; sourceTree = "<group>"; };
+		2D0A236C1C3445B100291B04 /* SpecialServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialServicesViewController.swift; sourceTree = "<group>"; };
+		2D0A236E1C34573E00291B04 /* VTS_01_1_Thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VTS_01_1_Thumb.jpg; sourceTree = "<group>"; };
 		2DA1D0281C31E4CD00FF7CB7 /* WorshipAnywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorshipAnywhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		2DA1D02A1C31E4CD00FF7CB7 /* WorshipAnywhere */ = {
 			isa = PBXGroup;
 			children = (
+				2D0A236E1C34573E00291B04 /* VTS_01_1_Thumb.jpg */,
 				2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */,
 				2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */,
 				2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */,
@@ -106,6 +113,8 @@
 				2DA1D0341C31E4CD00FF7CB7 /* Info.plist */,
 				2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */,
 				A74011F51C3379E600019778 /* VideoThumbnailCell.swift */,
+				2D0A23681C34409B00291B04 /* WorshipServicesViewController.swift */,
+				2D0A236C1C3445B100291B04 /* SpecialServicesViewController.swift */,
 			);
 			path = WorshipAnywhere;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DA1D0331C31E4CD00FF7CB7 /* Assets.xcassets in Resources */,
+				2D0A236F1C34573E00291B04 /* VTS_01_1_Thumb.jpg in Resources */,
 				2DA1D0311C31E4CD00FF7CB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +271,10 @@
 			files = (
 				2DA1D02E1C31E4CD00FF7CB7 /* MainMenuViewController.swift in Sources */,
 				2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */,
+				2D0A236D1C3445B100291B04 /* SpecialServicesViewController.swift in Sources */,
 				A74011F61C3379E600019778 /* VideoThumbnailCell.swift in Sources */,
 				2DA1D0591C31EA2100FF7CB7 /* PlayerViewController.swift in Sources */,
+				2D0A23691C34409B00291B04 /* WorshipServicesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="ENc-x8-BP7">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="ENc-x8-BP7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Special Services-->
         <scene sceneID="Zsc-Lx-prJ">
             <objects>
-                <viewController id="2GG-Vb-ghh" sceneMemberID="viewController">
+                <viewController id="2GG-Vb-ghh" customClass="SpecialServicesViewController" customModule="WorshipAnywhere" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PMU-TN-uHP"/>
                         <viewControllerLayoutGuide type="bottom" id="DSR-uV-v5c"/>
@@ -17,38 +17,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4q-tb-Sde">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="940"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cpc-UG-Ouu">
-                                        <rect key="frame" x="0.0" y="140" width="1920" height="530"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dlJ-QB-fa8">
-                                            <size key="itemSize" width="640" height="530"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="555"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dlJ-QB-fa8">
+                                            <size key="itemSize" width="640" height="555"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="KSs-2w-JOd" customClass="VideoThumbnailCell" customModule="WorshipAnywhere" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="640" height="530"/>
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoThumbnailCellForSpecialServices" id="KSs-2w-JOd" customClass="VideoThumbnailCell" customModule="WorshipAnywhere" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="640" height="555"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="640" height="530"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="640" height="555"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-la-fDQ">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VTS_01_1_Thumb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-la-fDQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5G2-Ig-wfz">
-                                                            <rect key="frame" x="0.0" y="481" width="640" height="49"/>
+                                                            <rect key="frame" x="0.0" y="505" width="640" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="customSize" width="640" height="530"/>
+                                                <connections>
+                                                    <outlet property="thumbnailImage" destination="w7r-la-fDQ" id="qBZ-Yo-Nqk"/>
+                                                    <outlet property="thumbnailLabel" destination="5G2-Ig-wfz" id="TI0-uX-48i"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -59,6 +61,10 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Special Services" id="ToQ-EP-Kgb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Cpc-UG-Ouu" id="hym-LZ-brd"/>
+                        <outlet property="scrollView" destination="E4q-tb-Sde" id="OMo-3e-sd7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeP-3f-xVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +73,7 @@
         <!--Worship Services-->
         <scene sceneID="APc-vT-B0n">
             <objects>
-                <viewController id="XBd-XK-eW9" sceneMemberID="viewController">
+                <viewController id="XBd-XK-eW9" customClass="WorshipServicesViewController" customModule="WorshipAnywhere" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6FZ-3R-Yda"/>
                         <viewControllerLayoutGuide type="bottom" id="cXU-X8-3b8"/>
@@ -76,14 +82,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4DQ-pN-yRP">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="940"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8W-tc-Jrz">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u9Z-UA-XPX">
+                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="555"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YOj-pB-nGW">
+                                            <size key="itemSize" width="640" height="555"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoThumbnailCellForWorshipServices" id="M3a-6c-0cG" customClass="VideoThumbnailCell" customModule="WorshipAnywhere" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="640" height="555"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="640" height="555"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VTS_01_1_Thumb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="roy-gN-vk6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-WV-pLu">
+                                                            <rect key="frame" x="0.0" y="505" width="640" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <connections>
+                                                    <outlet property="thumbnailImage" destination="roy-gN-vk6" id="S1U-E5-YPP"/>
+                                                    <outlet property="thumbnailLabel" destination="g3A-WV-pLu" id="aHA-KG-axq"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Worship Services" id="Nuc-iU-b2l"/>
+                    <connections>
+                        <outlet property="collectionView" destination="u9Z-UA-XPX" id="4aM-Wb-yvV"/>
+                        <outlet property="scrollView" destination="U8W-tc-Jrz" id="60g-SS-c7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5z9-uI-oye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,4 +155,7 @@
             <point key="canvasLocation" x="-1368" y="-596"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="VTS_01_1_Thumb.jpg" width="632" height="486"/>
+    </resources>
 </document>
