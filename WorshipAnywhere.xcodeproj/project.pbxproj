@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */; };
-		2DA1D02E1C31E4CD00FF7CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D02D1C31E4CD00FF7CB7 /* ViewController.swift */; };
+		2DA1D02E1C31E4CD00FF7CB7 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */; };
 		2DA1D0311C31E4CD00FF7CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */; };
 		2DA1D0331C31E4CD00FF7CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */; };
 		2DA1D03E1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D03D1C31E4CE00FF7CB7 /* WorshipAnywhereTests.swift */; };
 		2DA1D0491C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */; };
 		2DA1D0591C31EA2100FF7CB7 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */; };
+		A74011F61C3379E600019778 /* VideoThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74011F51C3379E600019778 /* VideoThumbnailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		2DA1D0281C31E4CD00FF7CB7 /* WorshipAnywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorshipAnywhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DA1D02D1C31E4CD00FF7CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		2DA1D0301C31E4CD00FF7CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DA1D0341C31E4CD00FF7CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorshipAnywhereUITests.swift; sourceTree = "<group>"; };
 		2DA1D04A1C31E4CE00FF7CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		A74011F51C3379E600019778 /* VideoThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoThumbnailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */,
-				2DA1D02D1C31E4CD00FF7CB7 /* ViewController.swift */,
+				2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */,
 				2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */,
 				2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */,
 				2DA1D0341C31E4CD00FF7CB7 /* Info.plist */,
 				2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */,
+				A74011F51C3379E600019778 /* VideoThumbnailCell.swift */,
 			);
 			path = WorshipAnywhere;
 			sourceTree = "<group>";
@@ -256,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA1D02E1C31E4CD00FF7CB7 /* ViewController.swift in Sources */,
+				2DA1D02E1C31E4CD00FF7CB7 /* MainMenuViewController.swift in Sources */,
 				2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */,
+				A74011F61C3379E600019778 /* VideoThumbnailCell.swift in Sources */,
 				2DA1D0591C31EA2100FF7CB7 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +487,7 @@
 				2DA1D04F1C31E4CE00FF7CB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DA1D0501C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhereTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +496,7 @@
 				2DA1D0521C31E4CE00FF7CB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DA1D0531C31E4CE00FF7CB7 /* Build configuration list for PBXNativeTarget "WorshipAnywhereUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +505,7 @@
 				2DA1D0551C31E4CE00FF7CB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

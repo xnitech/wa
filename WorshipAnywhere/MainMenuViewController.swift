@@ -9,12 +9,13 @@
 import UIKit
 import AVKit
 
-class ViewController: UIViewController {
+class MainMenuViewController: UITabBarController {
 
    var player = AVPlayer()
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      //http://www.stpaulserbin.org/stpaulserbin/videos.php
    }
    
    override func didReceiveMemoryWarning() {
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
       // Dispose of any resources that can be recreated.
    }
 
+   /*
    @IBAction func playVideo(sender: AnyObject)
    {
       let playerVC = PlayerViewController()
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
          playerVC.playVideo()
       }
    }
+   */
 
 }
 
