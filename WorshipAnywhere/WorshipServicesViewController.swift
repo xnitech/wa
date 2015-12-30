@@ -20,6 +20,8 @@ class WorshipServicesViewController: UIViewController, UICollectionViewDelegateF
       self.collectionView.delegate = self;
       self.collectionView.dataSource = self;
       // Do any additional setup after loading the view.
+      
+      self.getVideos()
    }
 
    override func viewDidLayoutSubviews() {
@@ -76,6 +78,71 @@ class WorshipServicesViewController: UIViewController, UICollectionViewDelegateF
       return UICollectionViewCell()
    }
 
+   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+   {
+      let playerVC = PlayerViewController()
+      self.presentViewController(playerVC, animated: true, completion: { () -> Void in
+         playerVC.playVideo()
+      })
+   }
+   
+   func getVideos()
+   {
+      let postEndpoint: String = "http://www.stpaulserbin.org/stpaulserbin/videos.php"
+      guard let url = NSURL(string: postEndpoint) else {
+         print("Error: cannot create URL")
+         return
+      }
+      let urlRequest = NSURLRequest(URL: url)
+      let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+      let session = NSURLSession(configuration: config)
+      let task = session.dataTaskWithRequest(urlRequest, completionHandler: {
+         (data, response, error) in
+         guard let responseData = data else {
+            print("Error: did not receive data")
+            return
+         }
+         guard error == nil else {
+            print("error calling videos.php")
+            print(error)
+            return
+         }
+         // parse the result as JSON, since that's what the API provides
+         let post: NSArray
+         do {
+            post = try NSJSONSerialization.JSONObjectWithData(responseData,
+               options: []) as! NSArray
+         } catch  {
+            print("error trying to convert data to JSON")
+            return
+         }
+         
+         for element in post {
+            let path = element["video_path"] as! String
+            if let desc = element["video_description"] as? String {
+               print(desc)
+            }
+            print(path)
+            //print(desc)
+         }
+         
+         //_ = post["title"]
+         
+         /*
+         // now we have the post, let's just print it to prove we can access it
+         print("The post is: " + post.description)
+         
+         // the post object is a dictionary
+         // so we just access the title using the "title" key
+         // so check for a title and print it if we have one
+         if let postTitle = post["title"] as? String {
+            print("The title is: " + postTitle)
+         }
+         */
+      })
+      task.resume()
+   }
+   
     /*
     // MARK: - Navigation
 

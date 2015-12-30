@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WorshipAnywhere/PlayerViewController.swift"
-            timestampString = "473044081.480272"
+            filePath = "WorshipAnywhere/WorshipServicesViewController.swift"
+            timestampString = "473203777.265775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "playVideo()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorshipAnywhere/PlayerViewController.swift"
-            timestampString = "473044081.480272"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "playVideo()"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "getVideos()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

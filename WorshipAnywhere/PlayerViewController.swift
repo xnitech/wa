@@ -15,8 +15,6 @@ import AVKit
 class PlayerViewController:  AVPlayerViewController, AVPlayerViewControllerDelegate {
    
    var activityIndicator = UIActivityIndicatorView()
-   var container = UIView()
-   var loadingView = UIView()
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -171,8 +169,8 @@ class PlayerViewController:  AVPlayerViewController, AVPlayerViewControllerDeleg
       self.activityIndicator.activityIndicatorViewStyle = .WhiteLarge
       self.activityIndicator.center = self.view.center
       self.activityIndicator.userInteractionEnabled = false
-      self.activityIndicator.startAnimating()
       self.view.addSubview(self.activityIndicator)
+      self.activityIndicator.startAnimating()
    }
    
    func hideLoading()
