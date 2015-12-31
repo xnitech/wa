@@ -10,6 +10,9 @@ import UIKit
 
 class WorshipServicesViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate {
 
+   var vc = VideoController()
+   var baseUrl = "http://www.stpaulserbin.org/media/videos/"
+   
    @IBOutlet var scrollView : UIScrollView!
    @IBOutlet var collectionView : UICollectionView!
    let reuseIdentifierFeatured = "VideoThumbnailCellForWorshipServices"
@@ -20,7 +23,10 @@ class WorshipServicesViewController: UIViewController, UICollectionViewDelegateF
       self.collectionView.delegate = self;
       self.collectionView.dataSource = self;
       // Do any additional setup after loading the view.
-      
+   }
+   
+   override func viewDidAppear(animated: Bool) {
+      super.viewDidAppear(animated)
       self.getVideos()
    }
 
@@ -57,7 +63,7 @@ class WorshipServicesViewController: UIViewController, UICollectionViewDelegateF
    {
       if (collectionView == self.collectionView)
       {
-         return 8
+         return self.vc.worshipVideos.count
       }
       
       return 0
@@ -67,10 +73,21 @@ class WorshipServicesViewController: UIViewController, UICollectionViewDelegateF
       
       if (collectionView == self.collectionView)
       {
+         if (indexPath.row >= self.vc.worshipVideos.count) {
+            return UICollectionViewCell()
+         }
          let cell : VideoThumbnailCell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifierFeatured, forIndexPath: indexPath) as! VideoThumbnailCell
+   
+         let imageUrlString = self.baseUrl + self.vc.worshipVideos[indexPath.row].path + "/" + self.vc.worshipVideos[indexPath.row].thumb
+         let imageUrl = NSURL(string: imageUrlString)
          
-         let  imageFilename = "VTS_01_1_Thumb.jpg"
-         cell.thumbnailImage.image = UIImage(named: imageFilename)
+         if let data = NSData(contentsOfURL: imageUrl!), let image = UIImage(data: data) {
+            cell.thumbnailImage.contentMode = .ScaleAspectFit
+            cell.thumbnailImage.image = image
+         }
+      
+         let imageTitle = self.vc.worshipVideos[indexPath.row].desc
+         cell.thumbnailLabel.text = imageTitle
          
          return cell
       }
@@ -82,75 +99,27 @@ class WorshipServicesViewController: UIViewController, UICollectionViewDelegateF
    {
       let playerVC = PlayerViewController()
       self.presentViewController(playerVC, animated: true, completion: { () -> Void in
-         playerVC.playVideo()
+         let videoUrlString = self.baseUrl + self.vc.worshipVideos[indexPath.row].path + "/" + self.vc.worshipVideos[indexPath.row].file
+         playerVC.playVideo(videoUrlString)
       })
    }
    
    func getVideos()
    {
-      let postEndpoint: String = "http://www.stpaulserbin.org/stpaulserbin/videos.php"
-      guard let url = NSURL(string: postEndpoint) else {
-         print("Error: cannot create URL")
-         return
-      }
-      let urlRequest = NSURLRequest(URL: url)
-      let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-      let session = NSURLSession(configuration: config)
-      let task = session.dataTaskWithRequest(urlRequest, completionHandler: {
-         (data, response, error) in
-         guard let responseData = data else {
-            print("Error: did not receive data")
-            return
-         }
-         guard error == nil else {
-            print("error calling videos.php")
-            print(error)
-            return
-         }
-         // parse the result as JSON, since that's what the API provides
-         let post: NSArray
-         do {
-            post = try NSJSONSerialization.JSONObjectWithData(responseData,
-               options: []) as! NSArray
-         } catch  {
-            print("error trying to convert data to JSON")
-            return
-         }
-         
-         for element in post {
-            let path = element["video_path"] as! String
-            if let desc = element["video_description"] as? String {
-               print(desc)
+      self.vc.loadVideos { (error) -> Void in
+         dispatch_async(dispatch_get_main_queue(),{
+            if (error != nil) {
+               let alert = UIAlertController(title: "Unable to load videos", message: "Make sure you have an Internet connection and choose OK to try again.", preferredStyle: UIAlertControllerStyle.Alert)
+               
+               alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                  self.getVideos()
+               }))
+               self.presentViewController(alert, animated: true, completion: nil)
             }
-            print(path)
-            //print(desc)
-         }
-         
-         //_ = post["title"]
-         
-         /*
-         // now we have the post, let's just print it to prove we can access it
-         print("The post is: " + post.description)
-         
-         // the post object is a dictionary
-         // so we just access the title using the "title" key
-         // so check for a title and print it if we have one
-         if let postTitle = post["title"] as? String {
-            print("The title is: " + postTitle)
-         }
-         */
-      })
-      task.resume()
+            else {
+               self.collectionView.reloadData()
+            }
+         })
+      }
    }
-   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

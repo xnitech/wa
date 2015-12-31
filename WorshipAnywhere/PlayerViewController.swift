@@ -49,14 +49,15 @@ class PlayerViewController:  AVPlayerViewController, AVPlayerViewControllerDeleg
    }
    
    
-   func playVideo()
+   func playVideo(urlString: String)
    {
       if (self.player != nil) {
          self.player!.removeObserver(self, forKeyPath: "status")
       }
       
+      let url = NSURL(string: urlString)
       //let url = NSURL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-      let url = NSURL(string: "http://www.stpaulserbin.org/media/videos/SerbinChurch_12_20_2015/VTS_01_1.mp4")
+      //let url = NSURL(string: "http://www.stpaulserbin.org/media/videos/SerbinChurch_12_20_2015/VTS_01_1.mp4")
       let item = AVPlayerItem(URL: url!)
       self.player = AVPlayer(playerItem: item)
       self.player!.currentItem!.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions(), context: nil)

@@ -18,6 +18,9 @@
 		2DA1D0491C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D0481C31E4CE00FF7CB7 /* WorshipAnywhereUITests.swift */; };
 		2DA1D0591C31EA2100FF7CB7 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */; };
 		A74011F61C3379E600019778 /* VideoThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74011F51C3379E600019778 /* VideoThumbnailCell.swift */; };
+		A74011F91C348B3E00019778 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74011F81C348B3E00019778 /* Video.swift */; };
+		A74011FC1C348C7300019778 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74011FB1C348C7300019778 /* VideoController.swift */; };
+		A74011FE1C34924200019778 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74011FD1C34924200019778 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		2DA1D04A1C31E4CE00FF7CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		A74011F51C3379E600019778 /* VideoThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoThumbnailCell.swift; sourceTree = "<group>"; };
+		A74011F81C348B3E00019778 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		A74011FB1C348C7300019778 /* VideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
+		A74011FD1C34924200019778 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +111,14 @@
 		2DA1D02A1C31E4CD00FF7CB7 /* WorshipAnywhere */ = {
 			isa = PBXGroup;
 			children = (
+				A74011FA1C348C4100019778 /* Controller */,
+				A74011F71C348B1C00019778 /* Model */,
 				2D0A236E1C34573E00291B04 /* VTS_01_1_Thumb.jpg */,
 				2DA1D02B1C31E4CD00FF7CB7 /* AppDelegate.swift */,
-				2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */,
 				2DA1D02F1C31E4CD00FF7CB7 /* Main.storyboard */,
 				2DA1D0321C31E4CD00FF7CB7 /* Assets.xcassets */,
 				2DA1D0341C31E4CD00FF7CB7 /* Info.plist */,
-				2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */,
 				A74011F51C3379E600019778 /* VideoThumbnailCell.swift */,
-				2D0A23681C34409B00291B04 /* WorshipServicesViewController.swift */,
-				2D0A236C1C3445B100291B04 /* SpecialServicesViewController.swift */,
 			);
 			path = WorshipAnywhere;
 			sourceTree = "<group>";
@@ -135,6 +139,27 @@
 				2DA1D04A1C31E4CE00FF7CB7 /* Info.plist */,
 			);
 			path = WorshipAnywhereUITests;
+			sourceTree = "<group>";
+		};
+		A74011F71C348B1C00019778 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A74011F81C348B3E00019778 /* Video.swift */,
+				A74011FD1C34924200019778 /* CustomError.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A74011FA1C348C4100019778 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1D02D1C31E4CD00FF7CB7 /* MainMenuViewController.swift */,
+				2DA1D0581C31EA2100FF7CB7 /* PlayerViewController.swift */,
+				2D0A23681C34409B00291B04 /* WorshipServicesViewController.swift */,
+				2D0A236C1C3445B100291B04 /* SpecialServicesViewController.swift */,
+				A74011FB1C348C7300019778 /* VideoController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +297,11 @@
 				2DA1D02E1C31E4CD00FF7CB7 /* MainMenuViewController.swift in Sources */,
 				2DA1D02C1C31E4CD00FF7CB7 /* AppDelegate.swift in Sources */,
 				2D0A236D1C3445B100291B04 /* SpecialServicesViewController.swift in Sources */,
+				A74011FC1C348C7300019778 /* VideoController.swift in Sources */,
 				A74011F61C3379E600019778 /* VideoThumbnailCell.swift in Sources */,
+				A74011FE1C34924200019778 /* CustomError.swift in Sources */,
 				2DA1D0591C31EA2100FF7CB7 /* PlayerViewController.swift in Sources */,
+				A74011F91C348B3E00019778 /* Video.swift in Sources */,
 				2D0A23691C34409B00291B04 /* WorshipServicesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

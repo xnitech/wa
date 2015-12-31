@@ -10,6 +10,9 @@ import UIKit
 
 class SpecialServicesViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate {
    
+   var vc = VideoController()
+   var baseUrl = "http://www.stpaulserbin.org/media/videos/"
+   
    @IBOutlet var scrollView : UIScrollView!
    @IBOutlet var collectionView : UICollectionView!
    let reuseIdentifierFeatured = "VideoThumbnailCellForSpecialServices"
@@ -20,6 +23,11 @@ class SpecialServicesViewController: UIViewController, UICollectionViewDelegateF
       self.collectionView.delegate = self;
       self.collectionView.dataSource = self;
       // Do any additional setup after loading the view.
+   }
+   
+   override func viewDidAppear(animated: Bool) {
+      super.viewDidAppear(animated)
+      self.getVideos()
    }
    
    override func viewDidLayoutSubviews() {
@@ -55,7 +63,7 @@ class SpecialServicesViewController: UIViewController, UICollectionViewDelegateF
    {
       if (collectionView == self.collectionView)
       {
-         return 8
+         return self.vc.specialVideos.count
       }
       
       return 0
@@ -65,10 +73,21 @@ class SpecialServicesViewController: UIViewController, UICollectionViewDelegateF
       
       if (collectionView == self.collectionView)
       {
+         if (indexPath.row >= self.vc.specialVideos.count) {
+            return UICollectionViewCell()
+         }
          let cell : VideoThumbnailCell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifierFeatured, forIndexPath: indexPath) as! VideoThumbnailCell
          
-         let  imageFilename = "VTS_01_1_Thumb.jpg"
-         cell.thumbnailImage.image = UIImage(named: imageFilename)
+         let imageUrlString = self.baseUrl + self.vc.specialVideos[indexPath.row].path + "/" + self.vc.specialVideos[indexPath.row].thumb
+         let imageUrl = NSURL(string: imageUrlString)
+         
+         if let data = NSData(contentsOfURL: imageUrl!), let image = UIImage(data: data) {
+            cell.thumbnailImage.contentMode = .ScaleAspectFit
+            cell.thumbnailImage.image = image
+         }
+         
+         let imageTitle = self.vc.specialVideos[indexPath.row].desc
+         cell.thumbnailLabel.text = imageTitle
          
          return cell
       }
@@ -76,14 +95,31 @@ class SpecialServicesViewController: UIViewController, UICollectionViewDelegateF
       return UICollectionViewCell()
    }
    
-   /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
+   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+   {
+      let playerVC = PlayerViewController()
+      self.presentViewController(playerVC, animated: true, completion: { () -> Void in
+         let videoUrlString = self.baseUrl + self.vc.specialVideos[indexPath.row].path + "/" + self.vc.specialVideos[indexPath.row].file
+         playerVC.playVideo(videoUrlString)
+      })
    }
-   */
    
+   func getVideos()
+   {
+      self.vc.loadVideos { (error) -> Void in
+         dispatch_async(dispatch_get_main_queue(),{
+            if (error != nil) {
+               let alert = UIAlertController(title: "Unable to load videos", message: "Make sure you have an Internet connection and choose OK to try again.", preferredStyle: UIAlertControllerStyle.Alert)
+               
+               alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                  self.getVideos()
+               }))
+               self.presentViewController(alert, animated: true, completion: nil)
+            }
+            else {
+               self.collectionView.reloadData()
+            }
+         })
+      }
+   }
 }
