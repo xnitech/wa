@@ -8,118 +8,88 @@
 
 import UIKit
 
-class WorshipServicesViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate {
-
-   var vc = VideoController()
-   var baseUrl = "http://www.stpaulserbin.org/media/videos/"
+class WorshipServicesViewController: ServicesViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate {
    
    @IBOutlet var scrollView : UIScrollView!
    @IBOutlet var collectionView : UICollectionView!
    let reuseIdentifierFeatured = "VideoThumbnailCellForWorshipServices"
    
-   override func viewDidLoad() {
+   override func viewDidLoad()
+   {
       super.viewDidLoad()
 
       self.collectionView.delegate = self;
       self.collectionView.dataSource = self;
-      // Do any additional setup after loading the view.
    }
    
-   override func viewDidAppear(animated: Bool) {
-      super.viewDidAppear(animated)
-      self.getVideos()
-   }
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        self.getVideos { (error) -> Void in
+            if (error == nil) {
+                self.collectionView.reloadData()
+            }
+        }
+    }
 
-   override func viewDidLayoutSubviews() {
-      self.scrollView!.contentSize = CGSizeMake(1920, 2200)
-   }
+    override func viewDidLayoutSubviews()
+    {
+        self.scrollView!.contentSize = CGSizeMake(1920, 2200)
+    }
    
-   override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
-   }
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
    
    // Collection View Methods
    
-   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-      return 50
-   }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout:  UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat
+    {
+        return 50
+    }
    
-   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-      return 50
-   }
-   
-   func collectionView(collectionView: UICollectionView,
-      layout collectionViewLayout: UICollectionViewLayout,
-      insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-         return UIEdgeInsets(top: 0.0, left: 50.0, bottom: 0.0, right: 50.0)
-   }
-   
-   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-      return 1
-   }
-   
-   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
-   {
-      if (collectionView == self.collectionView)
-      {
-         return self.vc.worshipVideos.count
-      }
-      
-      return 0
-   }
-   
-   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-      
-      if (collectionView == self.collectionView)
-      {
-         if (indexPath.row >= self.vc.worshipVideos.count) {
-            return UICollectionViewCell()
-         }
-         let cell : VideoThumbnailCell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifierFeatured, forIndexPath: indexPath) as! VideoThumbnailCell
-   
-         let imageUrlString = self.baseUrl + self.vc.worshipVideos[indexPath.row].path + "/" + self.vc.worshipVideos[indexPath.row].thumb
-         let imageUrl = NSURL(string: imageUrlString)
-         
-         if let data = NSData(contentsOfURL: imageUrl!), let image = UIImage(data: data) {
-            cell.thumbnailImage.contentMode = .ScaleAspectFit
-            cell.thumbnailImage.image = image
-         }
-      
-         let imageTitle = self.vc.worshipVideos[indexPath.row].desc
-         cell.thumbnailLabel.text = imageTitle
-         
-         return cell
-      }
-      
-      return UICollectionViewCell()
-   }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat
+    {
+        return 50
+    }
 
-   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
-   {
-      let playerVC = PlayerViewController()
-      self.presentViewController(playerVC, animated: true, completion: { () -> Void in
-         let videoUrlString = self.baseUrl + self.vc.worshipVideos[indexPath.row].path + "/" + self.vc.worshipVideos[indexPath.row].file
-         playerVC.playVideo(videoUrlString)
-      })
-   }
+    func collectionView(collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        insetForSectionAtIndex section: Int) -> UIEdgeInsets
+    {
+        return UIEdgeInsets(top: 0.0, left: 50.0, bottom: 0.0, right: 50.0)
+    }
    
-   func getVideos()
-   {
-      self.vc.loadVideos { (error) -> Void in
-         dispatch_async(dispatch_get_main_queue(),{
-            if (error != nil) {
-               let alert = UIAlertController(title: "Unable to load videos", message: "Make sure you have an Internet connection and choose OK to try again.", preferredStyle: UIAlertControllerStyle.Alert)
-               
-               alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                  self.getVideos()
-               }))
-               self.presentViewController(alert, animated: true, completion: nil)
-            }
-            else {
-               self.collectionView.reloadData()
-            }
-         })
-      }
-   }
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+   
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        if (collectionView == self.collectionView)
+        {
+            return self.getVideoCount()
+        }
+      
+        return 0
+    }
+   
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        if (collectionView == self.collectionView)
+        {
+            let cell : VideoThumbnailCell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifierFeatured, forIndexPath: indexPath) as! VideoThumbnailCell
+            self.populateVideoThumbnailCellAtIndex(cell, index: indexPath.row, completion: {})
+            return cell
+        }
+      
+        return UICollectionViewCell()
+    }
+
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        self.playVideo(indexPath.row)
+    }
 }
