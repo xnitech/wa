@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "cross1280x768.png",
       "scale" : "1x"
     }
   ],
